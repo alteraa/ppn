@@ -53,7 +53,7 @@ ul > li {
 - 💡 Vizyonunu Net Belirle
 - 🎨 Önce Planla
 - 💾 Git & GitHub'ı İyi Kullan
-- 🛠️ Popüler Bir Tech Stack Seç
+- ⚡ Popüler Bir Tech Stack Seç
 - 🧩 Karmaşık Özellikleri Parçalara Ayır
 - 💬 Chat Context'i Akıllıca Yönet
 - ✨ Promptları Düzeltmekten Çekinme
@@ -103,7 +103,7 @@ Buradaki tavsiyelerle hem planlama hem geliştirme süreçlerinizi kolaylaştır
 
 ---
 
-### 🛠️ Popüler Bir Tech Stack Seç
+### ⚡ Popüler Bir Tech Stack Seç
 
 * **Yaygın ve iyi dokümante edilmiş** teknolojilere bağlı kal.
 * AI modelleri **en yaygın teknolojilerde daha iyi performans gösterir**.

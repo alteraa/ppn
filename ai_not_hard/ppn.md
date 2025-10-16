@@ -278,3 +278,143 @@ Buraya kadar özetlersek:
 * En heyecan verici nokta şu:
 > **Optimizasyon**, makine öğrenmesindeki hemen her şeyin temelinde yatıyor. Bunu anlamak, yapay zekânın nasıl çalıştığını anlamanın **ilk adımı.**
 
+
+------
+
+### Gradient Descent Nedir?
+
+* Gradient Descent (Gradyan İnişi), bir fonksiyonun **minimum noktasını** bulmak için kullanılan temel bir **optimizasyon algoritmasıdır**.
+* Bu yöntem, fonksiyonun **türevini (gradyanını)** kullanarak, fonksiyonun **azalma yönünde küçük adımlar** atar.
+
+<img src="assets/gd1.webp" alt="gd1" width="60%">
+
+> 🎯 Amaç: Fonksiyonun **en dik iniş yönünü** bulmak ve adım adım minimuma ulaşmak.
+
+---
+
+### Gradyan ne demek?
+
+* Bir fonksiyonun **gradyanı**, o fonksiyonun en hızlı **artış yönünü** gösterir.
+* Dolayısıyla **–gradyan**, fonksiyonun en hızlı **azalış yönünü** gösterir.
+* Gradient Descent bu fikri kullanarak, her adımda parametreleri bu yönde günceller.
+
+<img src="assets/gd2.webp" alt="gd2" width="70%">
+
+> Gradyan: Fonksiyonun “eğim vektörü”.  
+> Negatif gradyan: “En dik iniş” yönü.
+
+---
+
+### Adım adım nasıl çalışır?
+
+1. Rastgele bir başlangıç noktası seç: $x_0$
+2. O noktadaki gradyanı hesapla: $\nabla f(x_0)$
+3. Fonksiyonun azalma yönünde küçük bir adım at:
+   $$
+   x_{1} = x_{0} - \eta \, \nabla f(x_{0})
+   $$
+4. Bu işlemi, hata (veya fonksiyon değeri) **artık değişmeyene kadar** tekrar et.
+
+<img src="assets/gd3.webp" alt="gd3" width="70%">
+
+> $\eta$ (eta): **Öğrenme oranı (learning rate)** — adımın büyüklüğünü belirler.
+
+---
+
+### Öğrenme oranı neden önemli?
+
+* Eğer $\eta$ **çok küçükse**, minimuma ulaşmak **çok yavaş olur**.  
+* Eğer $\eta$ **çok büyükse**, fonksiyonun minimum noktasını **kaçırabiliriz**.
+
+<img src="assets/gd4.webp" alt="gd4" width="70%">
+
+> ⚖️ İyi bir öğrenme oranı, hızlı ama dengeli iniş sağlar.
+
+---
+
+### Görsel olarak düşünelim
+
+<img src="assets/gd5.webp" alt="gd5" width="80%">
+
+* Bir topu, yüzeyi $f(x)$ olan bir dağdan aşağı yuvarladığını hayal et.  
+* Top, her adımda eğimin en dik olduğu yönde hareket eder.  
+* Yüzeyin şekline göre bazen **dalgalanabilir**, **sallanabilir** ama sonunda **minimum noktaya** yaklaşır.
+
+> 💡 İşte Gradient Descent’in sezgisel karşılığı budur.
+
+---
+
+### Matematiksel güncelleme kuralı
+
+Gradient Descent, her iterasyonda parametreleri şu şekilde günceller:
+
+$$
+\theta_{t+1} = \theta_t - \eta \, \nabla_{\theta} J(\theta_t)
+$$
+
+* $\theta$ → modelin parametreleri  
+* $J(\theta)$ → kayıp (loss) fonksiyonu  
+* $\nabla_{\theta} J(\theta)$ → kaybın parametrelere göre türevi  
+* $\eta$ → öğrenme oranı  
+
+> 🎯 Amaç: $J(\theta)$’yi minimuma indiren $\theta$ değerlerini bulmak.
+
+---
+
+### 2B örnek: yüzey üzerinde hareket
+
+<img src="assets/gd6.webp" alt="gd6" width="75%">
+
+* Başlangıç noktası rastgele seçilir.  
+* Her adımda gradyan yönü hesaplanır.  
+* Nokta, en dik iniş yönünde hareket eder.  
+* Nokta minimuma yaklaştıkça adımlar küçülür, sonunda dengeye ulaşır.
+
+---
+
+### Gradient Descent’in çeşitleri
+
+| Tür | Açıklama | Özellik |
+|-----|-----------|---------|
+| **Batch Gradient Descent** | Tüm veri kümesiyle gradyan hesaplar. | Kararlı ama yavaş. |
+| **Stochastic Gradient Descent (SGD)** | Her adımda tek örnekle günceller. | Gürültülü ama hızlı. |
+| **Mini-Batch Gradient Descent** | Küçük veri gruplarıyla çalışır. | En yaygın kullanılan yöntem. |
+
+<img src="assets/gd7.webp" alt="gd7" width="80%">
+
+---
+
+### Optimizasyon yolculuğu
+
+<img src="assets/gd8.webp" alt="gd8" width="80%">
+
+* Başta büyük adımlar atılır.
+* Minimuma yaklaştıkça adımlar küçülür.
+* Bazen **yerel minimumlara** takılabilir.
+* Modern algoritmalar (Adam, RMSProp, vb.) bu sorunu **momentum** ve **uyarlamalı öğrenme oranları** ile çözer.
+
+---
+
+### Özet
+
+- **Gradient Descent**, makine öğrenmesinin kalbinde yer alır.  
+- Modelin parametrelerini, **kayıp fonksiyonunu en aza indirecek şekilde** günceller.  
+- Her adım, **hata yüzeyinde en dik iniş yönünde** ilerlemektir.
+- Doğru öğrenme oranı ve veri yaklaşımı, modelin başarıya ulaşmasını sağlar.
+
+> 🎯 Kısacası: “Öğrenmek” = “Kayıp yüzeyinde optimize etmek”.
+
+---
+
+### Bonus: Sezgisel Analogi
+
+<img src="assets/gd9.webp" alt="gd9" width="60%">
+
+* Bir öğrenci düşün: her sınav sonrası nerede hata yaptığını görüp notlarını düzeltiyor.
+* Her düzeltme, küçük bir “gradyan adımıdır”.
+* Zamanla, öğrenci (ve model) hatalardan öğrenir ve **en iyi versiyonuna** yaklaşır.
+
+> 🤖 Gradient Descent, “yapay zekânın öğrenme şeklidir”.
+
+---
+

@@ -50,10 +50,10 @@ style: |
 
 <div style="display: flex; align-items: center; gap: 32px; min-height: 320px;">
   <div style="flex: 1; min-width: 180px;">
-    <img src="cover.jpg" alt="97 Things Every Data Engineer Should Know kapak görseli" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <img src="book.jpg" alt="97 Things Every Programmer Should Know" style="max-width: 100%; height: auto; border-radius: 10px;">
   </div>
   <div style="flex: 2;">
-    Bu sunum, <em>97 Things Every Data Engineer Should Know: Collective Wisdom from the Experts</em> (O'Reilly) kitabının yapay zeka tarafından özetlenip derlenmiş bir versiyonudur. İçerikte hata veya eksiklikler bulunabilir; lütfen bu özeti okurken dikkatli yaklaşınız.
+    Bu sunum, <em>97 Things Every Programmer Should Know: Collective Wisdom from the Experts</em> (O'Reilly) kitabının yapay zeka tarafından özetlenip derlenmiş bir versiyonudur. İçerikte hata veya eksiklikler bulunabilir; lütfen bu özeti okurken dikkatli yaklaşınız.
   </div>
 </div>
 

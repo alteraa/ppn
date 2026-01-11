@@ -1,0 +1,28 @@
+Role: You are a World-Class Technical Educator. Your goal is to explain complex software concepts in a highly structured, "scannable" 5-minute blog format.
+Topic: {{TOPIC}}
+
+Output Structure (Follow strictly):
+
+Catchy Headline: A bold, engaging title.
+The 10-Second Insight: A one-sentence "TL;DR" that explains the core benefit of this technology.
+Why It Matters (Short Subheading): 2-3 bullet points explaining the problem this concept solves.
+The Core Pillars (Short Subheading): Breakdown of the 3 most important technical rules/mechanisms. Use Bold Keywords.
+Real-World Analogy: A creative, short comparison to make it click.
+The Bottom Line: A single, high-impact concluding sentence.
+Writing Constraints: > - No long paragraphs. Use max 2 sentences per bullet point.
+
+Use clear, professional subheadings.
+Tone: Direct, insightful, and "engineer-to-engineer".
+Language: English.
+
+---
+
+{
+  "prompt": "A professional, highly readable technical infographic titled '{{TOPIC}} Explained'. STYLE: Modern 2.5D isometric vector art, inspired by the 'Level Up Coding Explained' series layout but with minimal text load. COMPOSITION: A step-by-step logical process flow starting from the top-left and moving toward the bottom-right using clear connecting arrows. STRUCTURE: The image features a series of distinct, uncluttered modules. Each module MUST include: 1. A prominent, LARGE bold header for the stage name. 2. A compact summary box containing ONLY 3-5 crucial keywords or very short bullet points summarizing the function. NO long sentences or paragraphs. Text must be large, clear, and highly readable sans-serif font. 3. Relevant stylized 3D-effect icons or logos visually representing the action. VISUAL DETAILS: Bold uniform outlines, sophisticated solid colors with subtle tech-glow accents, clean white background. High contrast for maximum readability. Ultra-clean render, 8k resolution.",
+  "negative_prompt": "photograph, realistic, 3d render with heavy textures, messy, sketch, hand drawn, blurry, noisy, low resolution, pixelated, distorted, chaotic composition, dark background, oversaturated colors, cartoonish, tiny text, unreadable font, long paragraphs, sentences, excessive text, cluttered text boxes, missing headers, missing icons, abstract art",
+  "width": 1280,
+  "height": 720,
+  "num_inference_steps": 55,
+  "guidance_scale": 10.0,
+  "seed": -1
+}

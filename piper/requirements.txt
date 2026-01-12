@@ -1,0 +1,5 @@
+scikit-build
+cmake
+ninja
+huggingface-hub[cli]
+datasets[audio]<4.0

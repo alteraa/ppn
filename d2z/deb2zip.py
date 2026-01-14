@@ -79,7 +79,7 @@ def main():
         output_path = args.output
     repo_dir = clone_setup_repo()
     for deb_file in deb_files:
-        shutil.copy2(deb_file, repo_dir / deb_file)
+        shutil.copy2(deb_file, repo_dir)
     shutil.make_archive(
         base_name=output_path.with_suffix(""),
         format="zip",

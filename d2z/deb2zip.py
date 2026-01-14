@@ -46,7 +46,7 @@ def clone_setup_repo():
         )
         shutil.rmtree(
             repo_dir / ".git",
-            onexc=lambda func, path, exc: (os.chmod(path, 0o777), func(path)),
+            onerror=lambda func, path, exc: (os.chmod(path, 0o777), func(path)),
         )
         return repo_dir
     except Exception as ex:
